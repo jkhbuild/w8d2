@@ -34,21 +34,4 @@ Array.prototype.transpose = function() {
     return arr;
 }
 
-Array.prototype.myEach = function(callback) {
-    let arr = [];
-    for (let i = 0; i < this.length; i++) {
-        arr.push(callback(this[i]));
-    }
-    return arr;
-}
-
-// const callback1 = function(x) {
-//     return x + 2;
-// }
-
-// const callback2 = (x) => x+2;
-
-// function newCallback(x) {
-//     return x + 2;
-// }
 
