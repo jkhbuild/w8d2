@@ -21,7 +21,11 @@ Array.prototype.myMap = function (callback) {
 
 }
 
-Array.prototype.myReduce = function (callback, initialValue = this[0]) {
+Array.prototype.myReduce = function (callback, initialValue) {
+    if (!initialValue) {
+        initialValue = this[0];
+        this.shift();
+    }
     let acc = initialValue;
     this.myEach(el =>{ 
         acc = callback(acc, el)
